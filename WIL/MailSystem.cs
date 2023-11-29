@@ -10,6 +10,12 @@ namespace WIL
 {
     public class MailSystem
     {
+        /// <summary>
+        /// Sends promotional material to all the users who signed up
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="httpf"></param>
+        /// <returns>bool</returns>
         public static Task<bool> SendPromotions(string fileName, HttpPostedFile httpf)
         {
             return Task.Run(async () =>
@@ -49,6 +55,13 @@ namespace WIL
                 }
             });
         }
+        /// <summary>
+        /// Sends email to administrator from the customer.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="email"></param>
+        /// <param name="message"></param>
+        /// <returns>bool</returns>
         public static Task<bool> SendEmail(string name, string email, string message)
         {
             return Task.Run(async () =>
@@ -82,7 +95,13 @@ namespace WIL
                 }
             });
         }
-
+        /// <summary>
+        /// Sends an email to a job applicant, regarding their application.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="email"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public static Task<bool> ApplicationReply(string name, string email, string message)
         {
             return Task.Run(async () =>

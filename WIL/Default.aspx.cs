@@ -1,16 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Web;
+﻿using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WIL
 {
     public partial class _Default : Page
     {
+        /// <summary>
+        /// Adds images for slideshow when the page loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             string[] images = { "Images/StockImage1.jpg", "Images/StockImage2.jpg", "Images/StockImage3.jpg" };

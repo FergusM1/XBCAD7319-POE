@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="AzureDatabase-Web.config Connection String" description="AzureDatabase Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:wil-server.database.windows.net,1433;Initial Catalog=WIL-Database;Persist Security Info=False;User ID=Database-user;Password=wertsh123@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Fergus\\source\\repos\\WIL\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AzureDatabase']/@connectionString" />
+  </parameter>
+</parameters>

@@ -12,7 +12,11 @@ namespace WIL
         {
             
         }
-
+        /// <summary>
+        /// Sends message to administrator from the customer and signs the customer up to receive promotions if they wish to.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected async void UploadDetails(object sender, EventArgs e)
         {
             

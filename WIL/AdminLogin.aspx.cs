@@ -10,7 +10,11 @@ namespace WIL
         {
 
         }
-
+        /// <summary>
+        /// Redirects the user to the admin menu if their login details are valid.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected async void LoginButton_Click(object sender, EventArgs e)
         {
             char[] charsToCheck = { '<', '>', '*', '=', ',' };

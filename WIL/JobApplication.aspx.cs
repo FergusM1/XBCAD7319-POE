@@ -1,12 +1,7 @@
-﻿using Microsoft.Ajax.Utilities;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WIL
 {
@@ -53,6 +48,11 @@ namespace WIL
         {
 
         }
+        /// <summary>
+        /// Uploads Job Application information if the inputs are deemed valid.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected async void UploadApplication(object sender, EventArgs e)
         {
             bool valid = true;

@@ -208,10 +208,9 @@ Very High in Vitamin B6<br />Essential for the formation of red blood cells and 
         position: relative;
         margin: auto;
        overflow:hidden;
-       width:1000px;
-        height:650px;
-        right:100px;
-        border:solid 5px;
+       width:100%;
+        height:100%;
+        right:50px;
     }
 
    .mySlides {
@@ -220,19 +219,19 @@ Very High in Vitamin B6<br />Essential for the formation of red blood cells and 
         position:absolute;
         opacity: 0; /* Start with slides invisible */
         transition:opacity 1.5s ease-in-out; /* Smooth transition for opacity */
-         z-index: 1; 
+        margin-top:40px;
     }
   .active{
       opacity:1;
-       z-index: 2;
   }
    .mySlides img{
     width: 100%;
     height: 100%;
+     border:solid 5px;
    }
    .text-content{
        position:relative;
-       left:250px;
+       left:150px;
        font-family:sans-serif;
        margin-top:40px;
    }

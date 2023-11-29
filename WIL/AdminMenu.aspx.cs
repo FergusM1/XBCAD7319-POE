@@ -1,6 +1,4 @@
-﻿using Microsoft.Ajax.Utilities;
-using System;
-using System.Data;
+﻿using System;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -18,6 +16,11 @@ namespace WIL
             }
 
         }
+        /// <summary>
+        /// Gets the index of the button the user clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void detailsGridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -43,6 +46,11 @@ namespace WIL
                 }
             }
         }
+        /// <summary>
+        /// Peforms accept,reject and download actions based on the user's selection
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected async void GridView_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             string Name;
@@ -108,6 +116,11 @@ namespace WIL
             }
 
         }
+        /// <summary>
+        /// Uploads and sends promotional material
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected async void UploadFile(object sender, EventArgs e)
         {
             if (DatabaseController.emails.Count > 0)
@@ -126,13 +139,18 @@ namespace WIL
                 Page.ClientScript.RegisterStartupScript(GetType(), "noEmailAlert", "alert('No emails added yet!');", true);
             }
         }
-
+        /// <summary>
+        /// Updates GridView
+        /// </summary>
         private async void UpdateDataView()
         {
             await DatabaseController.ViewData();
             detailsGridView.DataSource = DatabaseController.dataTable;
             detailsGridView.DataBind();
         }
+        /// <summary>
+        /// Job Application Data Class
+        /// </summary>
         public class JobApplicationData
         {
             public string Name { get; set; }
